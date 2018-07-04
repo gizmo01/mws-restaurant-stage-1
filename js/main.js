@@ -160,6 +160,8 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.setAttribute('alt', restaurant.name); //add the missing alt attribute to each image
+
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
