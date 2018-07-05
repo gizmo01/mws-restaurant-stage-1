@@ -203,7 +203,7 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   color: #59534d;
   font-family: Arial, sans-serif;
   font-size: 14pt;
@@ -219,7 +219,7 @@ nav h1 a {
   font-size: 11pt;
 }
 
-#restaurants-list li a {
+#restaurants-list li button {
   background-color: #3a1906;
   border-bottom: 3px solid #eee;
   color: #fff;
@@ -230,6 +230,7 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* ====================== Media Queries ====================== */
