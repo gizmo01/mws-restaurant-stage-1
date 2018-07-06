@@ -24,12 +24,14 @@ self.addEventListener("install", event => {
 self.addEventListener("fetch", event => {
   let cacheRequest = event.request;
   let cacheUrlObj = new URL(event.request.url);
-  if (event.request.url.indexOf("restaurant.html") > -1) {
-    const cacheURL = "restaurant.html";
-    cacheRequest = new Request(cacheURL);
-  }
+  // if (event.request.url.indexOf("restaurant.html") > -1) {
+  //   const cacheURL = "restaurant.html";
+  //   cacheRequest = new Request(cacheURL);
+  // }
 
-  event.respondWith(caches.match(cacheRequest).then(response => {
+  event.respondWith(caches.match(cacheRequest, {
+    ignoreSearch: true
+  }).then(response => {
     return (response ||
       fetch(event.request)
       .then(fetchResponse => {
